@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+</head>
+<body>
+    <h1>Books</h1>
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Available</th>
+                    <th>Get</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in bd %}
+                <tr>
+                    <td>{{ book.B_id }}</td>
+                    <td>{{ book.Name }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        {% if book.status %}
+                            <span class="status badge-active">Yes</span>
+                        {% else %}
+                            <span class="status badge-pending">No</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if book.status %}
+                            <a class="btn" href="{% url 'borrow_page' book.B_id %}">Borrow</a>
+                        {% else %}
+                            <a class="btn1" href="{% url 'returnBook' book.B_id %}">Return</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <a class="btn2" href="/user">Home</a>
+</body>
+</html>

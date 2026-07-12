@@ -1,0 +1,84 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+.container {
+    width: 420px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.container h1 {
+    text-align: center;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Book Details */
+.book-info {
+    margin-bottom: 25px;
+}
+
+.book-info p {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #555;
+}
+
+.book-info strong {
+    color: #222;
+}
+
+/* Confirm Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b71c1c;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+}

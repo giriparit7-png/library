@@ -1,0 +1,103 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+.container {
+    width: 430px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Book Information */
+.book-info {
+    margin-bottom: 25px;
+}
+
+.book-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 12px 0;
+}
+
+.book-info strong {
+    color: #222;
+}
+
+/* Confirm Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #536de6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Optional Cancel Button */
+.input-group cancel-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.input-group cancel-btn:hover {
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .book-info p {
+        font-size: 15px;
+    }
+}

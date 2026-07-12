@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <form>
+    <h1>Library Management System</h1>
+    <button><a href="/admin" style="text-decoration: None;">Admin Login</a></button>
+    <div class="login-container">Already have an account? </div>
+    <button class="login"><a href="/login" style="text-decoration: None;">Login</a></button><br>
+    <div class="signup-container">Dont have an account? </div>
+    <button class="signin"><a href="/register" style="text-decoration: None;">Sign Up</a></button>
+    <!--<button><a href="/dashboard">Go to dashBoard</a></button>-->
+    </form>
+</body>
+</html>

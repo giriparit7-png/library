@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+
+    <link rel="stylesheet" href="{% static 'return.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Return Your Book</h1>
+    <h2>Book Details</h2>
+
+    <div class="book-info">
+        <p><strong>Book ID:</strong> {{ book.B_id }}</p>
+        <p><strong>Book Name:</strong> {{ book.Name }}</p>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Pages:</strong> {{ book.pages }}</p>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button class="btn" type="submit">
+            Confirm Return
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>

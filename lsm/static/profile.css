@@ -1,0 +1,63 @@
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Card */
+.profile-container {
+    width: 500px;
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.profile-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.profile-container p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #536de6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}

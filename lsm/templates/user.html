@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+
+    <div class="profile-container">
+
+        <h1>Hello, {{ request.user.username }}</h1>
+
+        <p>Welcome to your profile page.</p>
+
+        <p>Here you can view your borrowed books and manage your account.</p>
+
+        <a href="{% url 'DashBoard' %}" class="btn">
+            📚 View Books
+        </a>
+
+    </div>
+
+</body>
+</html>
