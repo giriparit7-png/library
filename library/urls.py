@@ -18,14 +18,26 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from lsm import views
+
+
 urlpatterns = [
+
     path("admin/", admin.site.urls),
-    path("",views.Home,name="HomePage"),
+
+    path("", views.Home, name="HomePage"),
+
     path("login/", views.login_page, name="login"),
+
     path("logout/", views.logout_page, name="logout"),
+
     path("register/", views.register, name="register"),
-    path("dashboard/",views.DashBoard,name="DashBoard"),
-    path("borrow/<int:B_id>",views.Borrow_page,name="borrow_page"),
-    path("return/<int:B_id>",views.Return_Book,name="returnBook"),
-    path("user/",views.User_profile,name="UserPage"),
+
+    path("dashboard/", views.DashBoard, name="DashBoard"),
+
+    path("borrow/<int:B_id>/", views.Borrow_page, name="borrow_page"),
+
+    path("return/<int:B_id>/", views.Return_Book, name="returnBook"),
+
+    path("user/", views.User_profile, name="UserPage"),
+
 ]
