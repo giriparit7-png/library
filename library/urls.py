@@ -27,5 +27,5 @@ urlpatterns = [
     path("dashboard/",views.DashBoard,name="DashBoard"),
     path("borrow/<int:B_id>",views.Borrow_page,name="borrow_page"),
     path("return/<int:B_id>",views.Return_Book,name="returnBook"),
-    path("user/",views.User_profile,name="UserPage")
+    path("user/",views.User_profile,name="UserPage"),
 ]
